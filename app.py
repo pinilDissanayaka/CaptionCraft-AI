@@ -13,14 +13,14 @@ st.write("CaptionCraft AI is an advanced image caption generator that combines i
 st.write("-----------------------------------------------------------------------------------------------------------") 
 
 
-uploaded_image_files = st.file_uploader(" Upload an Images or Photos", accept_multiple_files=True)
+uploaded_image_files = st.file_uploader(" Upload an Images or Photos :", accept_multiple_files=True)
 
 if uploaded_image_files:
     for uploaded_image_file in uploaded_image_files:
         st.image(image=uploaded_image_file)
 
 selected_vibe = st.selectbox(
-    "Select a vibe",
+    "Select a vibe :",
     options=("Funny 😂🎉",
      "Professional 💼📊",
      "Casual 😎👕",
