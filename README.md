@@ -2,7 +2,7 @@
 
 Welcome to CaptionCraft AI! This project uses the power of LLMs (Large Language Models) and RAG (Retrieval-Augmented Generation) to automatically generate rich, context-aware captions for images. 🧠✨
 
-🚀 Demo
+## 🚀 Demo
 👉 [Try the Live Demo here!](https://captioncraft-ai-9ndhhsvs8hgarv7r3pxxnv.streamlit.app/) 👈
 
 ![Screenshot 2024-09-21 223618](https://github.com/user-attachments/assets/3971f1fd-d875-45fc-ab75-78e3ee4c946f)
@@ -11,9 +11,6 @@ Welcome to CaptionCraft AI! This project uses the power of LLMs (Large Language 
 
 ## 🚀 Project Overview
 CaptionCraft AI is an advanced image caption generator that combines image recognition and natural language processing. With the help of LLMs for generating initial captions and RAG for refining them with contextual data, this tool produces accurate and enriched descriptions for your images! 🌟
-
-🚀 Demo
-👉 Try the Live Demo here! 👈
 
 ## 🔧 Key Features
 1. Image Captioning: Automatically generate descriptive captions for any image. 🖼️
