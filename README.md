@@ -1,4 +1,8 @@
 # 📸 CaptionCraft AI 🎨
+![Screenshot 2024-09-21 223618](https://github.com/user-attachments/assets/3971f1fd-d875-45fc-ab75-78e3ee4c946f)
+![Screenshot 2024-09-21 223902](https://github.com/user-attachments/assets/d6bceccc-21f1-4be6-826c-c27519151567)
+![Screenshot 2024-09-21 223921](https://github.com/user-attachments/assets/261e2e36-feb0-49c8-a963-f24b0a93caa7)
+
 Welcome to CaptionCraft AI! This project uses the power of LLMs (Large Language Models) and RAG (Retrieval-Augmented Generation) to automatically generate rich, context-aware captions for images. 🧠✨
 
 ## 🚀 Project Overview
