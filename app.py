@@ -9,6 +9,8 @@ st.set_page_config(page_title="📸 CaptionCraft AI 🎨")
 
 st.title("📸 CaptionCraft AI 🎨")
 st.write("-----------------------------------------------------------------------------------------------------------") 
+st.write("CaptionCraft AI is an advanced image caption generator that combines image recognition and natural language processing. With the help of LLMs for generating initial captions and RAG for refining them with contextual data, this tool produces accurate and enriched descriptions for your images! 🌟")
+st.write("-----------------------------------------------------------------------------------------------------------") 
 
 
 uploaded_image_files = st.file_uploader(" Upload an Images or Photos", accept_multiple_files=True)
