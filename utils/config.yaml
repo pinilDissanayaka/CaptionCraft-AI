@@ -1,0 +1,14 @@
+llm:
+  model: "llama-3.1-70b-versatile"
+  temperature: 0.6
+  max_tokens: None
+  timeout: None
+
+vision_model: "llava-v1.5-7b-4096-preview"
+
+embedding_model: "models/text-embedding-004"
+
+temp_dir: "temp"
+
+vision_prompt: "Analyze the image in detail and provide comprehensive insights. Begin by identifying key objects, people, actions, and the overall scene. Describe the context or setting, including whether it is indoors or outdoors, and the likely purpose of the image. Evaluate the emotions and mood conveyed by the subjects, paying attention to facial expressions, body language, and the atmosphere created by elements such as colors, lighting, and composition. Next, infer deeper meanings, cultural references, or symbolic elements present in the image. Highlight any patterns or trends in objects, actions, or themes, and explain their significance. Provide practical insights regarding the interactions between the objects and subjects, and offer predictions about potential future outcomes based on the current situation depicted. Conclude by summarizing key takeaways and any actionable insights or recommendations drawn from the image analysis."
+
