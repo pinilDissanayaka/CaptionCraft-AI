@@ -4,8 +4,17 @@ from utils.config import get_vision_prompt, get_vision_model
 from groq import Groq
 import logging
 
+temp_dir="/temp"
 
-def covert_image_to_base64(image_file:str):
+
+def save_img_dir(uploaded_files):
+    for upload_file in uploaded_files:
+        dir=os.path.join(temp_dir, upload_file.name)
+        pass
+    
+
+
+def covert_image_to_base64(image_file):
     image_encoding=base64.encode(image_file.read()).decode('utf-8')
     return image_encoding
 
@@ -37,14 +46,14 @@ def covert_image_to_text(image_encoding):
         logging.exception(e)
         
 
-def get_image_description(image_files=[]):
+def get_image_descriptions(image_files):
     
     image_descriptions=[]
     
     for image_file in image_files:
-        image_encoding=covert_image_to_base64(image_file=image_file)
-        image_description=covert_image_to_text(image_encoding=image_encoding)
-        
+        #image_encoding=covert_image_to_base64(image_file=image_file.read())
+        image_description=covert_image_to_text(image_encoding=image_file)
+
         image_descriptions.append(image_description)
         
     return image_descriptions

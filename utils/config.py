@@ -21,7 +21,7 @@ os.environ["GOOGLE_API_KEY"]=os.getenv('GOOGLE_API_KEY')
 os.environ["GOOGLE_PROJECT_ID"]=os.getenv('GOOGLE_PROJECT_ID')
 
 
-with open("config.yaml", "r") as file:
+with open("utils/config.yaml", "r") as file:
     configuration=yaml.safe_load(file)
 
 
@@ -34,8 +34,8 @@ def get_vision_model()->str:
 def get_llm():
     return ChatGroq(model=configuration["llm"]["model"],
                           temperature=configuration["llm"]["temperature"],
-                            max_tokens=configuration["llm"]["max_tokens"],
-                            timeout=configuration["llm"]["timeout"])
+                            max_tokens=None,
+                            timeout=None)
 
 def get_vision_prompt():
     return configuration['vision_prompt']
