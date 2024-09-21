@@ -1,0 +1,7 @@
+langchain_core
+streamlit
+dotenv
+langchain_groq
+groq
+base64
+logging

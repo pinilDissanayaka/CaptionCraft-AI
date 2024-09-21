@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 from utils.llm_handler import generate_caption
 

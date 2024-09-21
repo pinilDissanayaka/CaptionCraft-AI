@@ -3,11 +3,7 @@ import yaml
 import streamlit as st
 import logging
 from dotenv import load_dotenv
-from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_groq.chat_models import ChatGroq
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_pinecone import PineconeVectorStore
 from groq import Groq
 import base64
 
@@ -20,10 +16,6 @@ os.environ['GROQ_API_KEY']=st.secrets['GROQ_API_KEY']
 
 with open("utils/config.yaml", "r") as file:
     configuration=yaml.safe_load(file)
-
-
-def get_embedding_model():
-    return GoogleGenerativeAIEmbeddings(model=configuration["embedding_model"])
 
 def get_vision_model()->str:
     return configuration["vision_model"]
