@@ -2,6 +2,7 @@ import os
 import base64
 from utils.config import get_vision_prompt, get_vision_model
 from groq import Groq
+from tempfile import TemporaryDirectory
 import logging
 
 temp_dir="/temp"
@@ -57,3 +58,4 @@ def get_image_descriptions(image_files):
         image_descriptions.append(image_description)
         
     return image_descriptions
+

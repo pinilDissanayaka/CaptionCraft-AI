@@ -1,5 +1,7 @@
+import os
 import streamlit as st
 from utils.llm_handler import generate_caption
+from PIL import Image
 
 temp_file_path="temp/"
 
@@ -12,7 +14,9 @@ st.write("CaptionCraft AI is an advanced image caption generator that combines i
 st.write("-----------------------------------------------------------------------------------------------------------") 
 
 
-uploaded_image_files = st.file_uploader(" Upload an Images or Photos :", accept_multiple_files=True)
+uploaded_image_files = st.file_uploader(" Upload an Images or Photos :", accept_multiple_files=True, type=["jpg", "jpeg", "png", "gif"])
+
+converted_images=[]
 
 if uploaded_image_files:
     for uploaded_image_file in uploaded_image_files:
