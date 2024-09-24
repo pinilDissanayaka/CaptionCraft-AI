@@ -5,8 +5,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
 
-def generate_caption(vibe:list, addition_prompt:str, image_files):
-    image_descriptions=get_image_descriptions(image_files=image_files)
+def generate_caption(vibe:list, addition_prompt:str, saved_images):
+    image_descriptions=get_image_descriptions(saved_images=saved_images)
     if addition_prompt:    
         caption_generate_prompt_template="""
         Based on the following list of image descriptions, create a 5 captions that captures the essence of the image. The caption should match the following vibe: {VIBE} 

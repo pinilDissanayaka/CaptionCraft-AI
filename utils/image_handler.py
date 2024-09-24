@@ -5,18 +5,9 @@ from groq import Groq
 from tempfile import TemporaryDirectory
 import logging
 
-temp_dir="/temp"
-
-
-def save_img_dir(uploaded_files):
-    for upload_file in uploaded_files:
-        dir=os.path.join(temp_dir, upload_file.name)
-        pass
-    
-
 
 def covert_image_to_base64(image_file):
-    image_encoding=base64.encode(image_file.read()).decode('utf-8')
+    image_encoding=base64.b64encode(image_file).decode('utf-8')
     return image_encoding
 
 
@@ -47,15 +38,32 @@ def covert_image_to_text(image_encoding):
         logging.exception(e)
         
 
-def get_image_descriptions(image_files):
+def get_image_descriptions(saved_images):
     
     image_descriptions=[]
     
-    for image_file in image_files:
-        #image_encoding=covert_image_to_base64(image_file=image_file.read())
-        image_description=covert_image_to_text(image_encoding=image_file)
-
+    for saved_image in saved_images:
+        with open(saved_image, "rb") as image_file:
+            image_encoding=covert_image_to_base64(image_file=image_file.read())
+            
+        image_description=covert_image_to_text(image_encoding=image_encoding)
         image_descriptions.append(image_description)
+        
+        if os.path.exists(saved_image):
+                os.remove(saved_image)
         
     return image_descriptions
 
+def save_image(original_image_file):
+    
+    temp_dir="temp"
+    
+    image_path=os.path.join(temp_dir, original_image_file.name)
+    
+    with open(image_path, "wb") as image_file:
+        image_file.write(original_image_file.getbuffer())
+
+    return image_path
+    
+    
+    
